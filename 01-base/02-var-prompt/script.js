@@ -12,5 +12,9 @@
 (function() {
 
     // your code here
+    var name = prompt( "Hello What's your name ?")
+    alert( "Hello " + name)
+
+    
 
 })();

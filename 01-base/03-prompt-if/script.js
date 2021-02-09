@@ -12,5 +12,13 @@
 (function() {
 
   // your code here
+  var ask = prompt("Do you like cake ?");
+
+  if (ask == "yes"){
+    alert("Your are the best")
+  }
+  else{
+    alert("More cake for me then !")
+  }
 
 })();
