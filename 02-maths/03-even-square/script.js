@@ -15,6 +15,12 @@
 
         // your code here
 
-    });
+
+for ( x = 1 ; x <= 21; x++) 
+{
+  alert(x*x);
+}
+
+});
 
 })();
