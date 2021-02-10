@@ -12,12 +12,11 @@
 (function() {
 
   // your code here
-  var ask = prompt("Do you like cake ?");
+  var ask = prompt("Do you like cake ?").toLowerCase();
 
   if (ask == "yes"){
     alert("Your are the best")
-  }
-  else{
+  } else {
     alert("More cake for me then !")
   }
 

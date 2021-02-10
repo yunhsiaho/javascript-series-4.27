@@ -19,20 +19,20 @@
         let operandOne = parseInt(document.getElementById("op-one").value);
         let operandTwo = parseInt(document.getElementById("op-two").value);
         // perform the operation
-    switch(operation){
-    case 'addition': 
-    alert(operandOne + operandTwo);
-    break; 
-    case 'substraction': 
-    alert(operandOne - operandTwo);
-    break; 
-    case 'multiplication': 
-    alert(operandOne * operandTwo);
-    break; 
-    case 'division': 
-    alert(operandOne / operandTwo );
-    break;
-}
+        switch (operation) {
+            case 'addition':
+                alert(operandOne + operandTwo);
+                break;
+            case 'substraction':
+                alert(operandOne - operandTwo);
+                break;
+            case 'multiplication':
+                alert(operandOne * operandTwo);
+                break;
+            case 'division':
+                alert(operandOne / operandTwo);
+                break;
+        }
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>

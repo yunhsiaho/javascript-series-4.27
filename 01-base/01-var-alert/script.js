@@ -11,7 +11,7 @@
 
 (function() {
     // your code here
-    var hello = alert("Hello World") 
-    
+    var hello = "Hello World";
+    alert(hello);
 
 })();

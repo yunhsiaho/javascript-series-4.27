@@ -14,18 +14,24 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
-    document.getElementById("number").value
-        // your code here
+    // Récupérer la valeur de l'input        
+      let x = Number(document.getElementById("number").value);
 
-
-            var result = 1;
-            var n = document.getElementById("number").value;
-            
-            for (var i = 1; i <= n + 1; i++) {
-              result = result * i;
-              alert(result);
-        
-            }
-   
+    // Rejeter si négatif ou décimal
+      if (x < 0 || x % 1 != 0) {
+        alert("Vous ne pouvez entrer que des entiers positifs");
+      }
+    
+    // Fonction factorielle recursive   
+      function factorial(x) {
+        if (x === 0) {
+          return 1;
+        }
+        return x * factorial(x-1);          
+      }
+          
+    // Alert de la réponse
+      alert(factorial(x));
+    
     });
 })();

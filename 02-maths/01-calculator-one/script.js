@@ -14,45 +14,26 @@
 (function() {
     // to get the value of an input: document.getElementById("element-id").value
 
+    let operandOne = document.getElementById("op-one");
+    let operandTwo = document.getElementById("op-two");
 
     document.getElementById("addition").addEventListener("click", function() {
-
-        let operandOne = parseInt(document.getElementById("op-one").value);
-        let operandTwo = parseInt(document.getElementById("op-two").value);
-
-        alert(operandOne + operandTwo);
-
         // perform an addition
+        alert(parseInt(operandOne.value) + parseInt(operandTwo.value));
     });
+
     document.getElementById("substraction").addEventListener("click", function() {
-
-
-        let operandOne = parseInt(document.getElementById("op-one").value);
-        let operandTwo = parseInt(document.getElementById("op-two").value);
-
-        alert(operandOne - operandTwo);
-
         // perform an substraction
+        alert(parseInt(operandOne.value) - parseInt(operandTwo.value));
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
-
-
-        let operandOne = parseInt(document.getElementById("op-one").value);
-        let operandTwo = parseInt(document.getElementById("op-two").value);
-
-        alert(operandOne * operandTwo);
-
         // perform an multiplication
+        alert(parseInt(operandOne.value) * parseInt(operandTwo.value));
     });
 
     document.getElementById("division").addEventListener("click", function() {
-
-        let operandOne = parseInt(document.getElementById("op-one").value);
-        let operandTwo = parseInt(document.getElementById("op-two").value);
-
-        alert(operandOne / operandTwo);
-
         // perform an division
+        alert(parseInt(operandOne.value) / parseInt(operandTwo.value));
     });
 })();

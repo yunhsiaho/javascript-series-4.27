@@ -12,12 +12,12 @@
 (function() {
 
     // your code here
-    var firstQuestion= prompt("How old are you ?");
+    var firstQuestion= parseInt(prompt("How old are you ?"));
     var secondQuestion= prompt("What's you gender ?");
     var thirdQuestion= prompt("Where do you live ?");
 
-    if((firstQuestion != null) &(secondQuestion !=null) &(thirdQuestion!= null)) {
-        confirm ("I am" + firstQuestion + "\n I am a " + secondQuestion + "\n I live in " + thirdQuestion);
+    if( (firstQuestion !== "") && (secondQuestion !== "") && (thirdQuestion !== "") ) {
+        confirm ("I am " + firstQuestion + "\n I am a " + secondQuestion + "\n I live in " + thirdQuestion);
     }
     else{
         alert("Try again");
