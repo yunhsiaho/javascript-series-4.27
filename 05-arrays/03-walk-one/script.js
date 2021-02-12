@@ -27,5 +27,14 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', function (){
 
+        
+
+        for (var fruit in fruits) {
+          console.log(`${fruit}: ${fruits[fruit]}`); //revenir sur le site pour meilleur explication des $ 
+          
+        }
+
+    });
 })();
