@@ -11,21 +11,6 @@
 
 (function() {
 
-    document.getElementById("run").addEventListener("click", function() {
-
-        var year = document.getElementById("year").value;
-        var date = new Date(year);
-        date.setDate(13);
-        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-
-        for (var i = 0; i <= 11; i++) {
-            date.setMonth(i);
-            let day = date.getDay();
-
-            if(day == 5){
-                alert(date.toLocaleDateString("en-GB", options));
-            }
-        }
-    });
+    // your code here
 
 })();

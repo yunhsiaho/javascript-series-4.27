@@ -11,20 +11,8 @@
 
 (function() {
 
-    let d = new Date();
-    //console.log(d);
+    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    let x = d.getHours()*60;
-    //console.log(x);
-    let y = d.getMinutes();
-    //console.log(x + y);
-
-    if ((x+y) < 1050) {
-        document.getElementById("target").innerHTML = "Hello";
-    }
-
-    else if ((x+y) >= 1050) {
-        document.getElementById("target").innerHTML = "Good evening";
-    }
+    // your code here
 
 })();
