@@ -90,5 +90,20 @@
     ];
 
     // your code here
+    const reducer = (acc, cur) => acc + cur ;  //cur = valeur actuelle du tableau. 
+
+    var ageStock = new Array();
+
+    people.forEach(element =>ageStock.push(element["age"]) ); //afficher les ages
+    
+    
+
+    document.getElementById("run").addEventListener("click", function() {
+
+        
+
+        console.log(ageStock.reduce(reducer));
+        
+    });
 
 })();
