@@ -13,6 +13,11 @@
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    // your code here
+    let d = new Date();
+    let date= d.toDateString();
+
+    let hour = d.getHours() +':'+(d.getMinutes());
+
+    document.getElementById("target").innerHTML = "Hello, today it is " + date +" , "+ hour;
 
 })();
