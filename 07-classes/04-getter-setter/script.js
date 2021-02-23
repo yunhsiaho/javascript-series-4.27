@@ -11,4 +11,30 @@
 
 (() => {
     // your code here
+    const Person = class{
+        constructor(firstName, lastName){
+            this.firstName=firstName;
+            this.lastName=lastName;
+        }
+        get getName(){
+            return (`${this.firstName} ${this.lastName}`)
+        }
+        set setName(text){
+            let arrName = text.split(" ")
+            this.firstName = arrName[0]
+            this.lastName=arrName[1]
+        }
+        
+    } 
+    
+    const fullName = new Person('black','Umbrella');
+    const newPerson = new Person();
+    newPerson.setName= "tariq selawi";
+    
+    document.querySelector('#run').addEventListener('click', ()=>{
+    console.log(fullName.getName);
+    fullName.setName='the rings';
+    console.log(fullName.getName);
+    console.log(newPerson);
+});
 })();
