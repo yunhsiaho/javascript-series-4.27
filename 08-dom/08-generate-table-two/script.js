@@ -11,6 +11,22 @@
 
 (function() {
 
-    // your code here
+  var t = document.createElement('table');
+  t.setAttribute('id', 'newTable');
+  document.getElementById('target').appendChild(t);
+  var x = 0;
+  for (i = 0; i < 10; i++) {
+    var r = document.createElement('tr');
+
+
+    for (n = 1; n <= 10; n++) {
+      var c = document.createElement('td');
+      x = x + 1;
+      z = document.createTextNode(x);
+      c.appendChild(z);
+      r.appendChild(c);
+    }
+    document.querySelector('table').appendChild(r);
+  }
 
 })();
