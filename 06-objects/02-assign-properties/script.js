@@ -26,5 +26,40 @@
         os: "linux",
         user: null,
     };
-    // your code here
+    
+    
+    document.getElementById("run").addEventListener("click", () => {
+
+        let obj = []
+
+        computers.forEach( el => {
+            el = {...defaultProps, ...el }
+            obj.push(el)
+        })
+        computers.splice(0, computers.length , ...obj)
+
+        console.log(computers)
+
+
+        // for (let i = 0; i < computers.length; i++) {
+            // méthode if ... else
+            // if (computers[i].available == undefined) {
+            //     computers[i].available = defaultProps.available;
+            // } else {}
+            // if (computers[i].os == undefined) {
+            //     computers[i].os = defaultProps.os;
+            // } else {}
+            // if (computers[i].user == undefined) {
+            //     computers[i].user = defaultProps.user;
+            // } else {}
+
+            // méthode if ... else ternaire
+            // (computers[i].available == undefined) ? computers[i].available = defaultProps.available: '';
+            // (computers[i].os == undefined) ? computers[i].os = defaultProps.os: '';
+            // (computers[i].user == undefined) ? computers[i].user = defaultProps.user: '';
+
+            // console.log(computers[i]);
+        // }
+
+    })
 })();
