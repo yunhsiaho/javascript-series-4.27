@@ -12,5 +12,32 @@
 (function() {
 
     // your code here
+    
+    // set random and counter
+    let number = Math.floor(Math.random()*100);
+    console.log(number);
+    let i = 1;
+    let guess = prompt('A guess ?');
+    
+    // loop till the guess is correct (additional statement, guess is a number)
+    while(number != guess && isNaN(guess) == false){
+        if(number > guess){
+            alert("Higher !");
+            i++;
+            guess = prompt('A guess ?');
+        }else if (number < guess) {
+            alert("Lower !");
+            i++;
+            guess = prompt('A guess ?');
+        }
+    }
+    
+    // display message for good guess or NaN
+    if (guess == number){
+        alert(`that's it!\n you needed ${i} guesses`);
+    }
+    if (isNaN(guess)){
+        alert(`'${guess}' is not even a number asshole...`);
+    }
 
 })();
