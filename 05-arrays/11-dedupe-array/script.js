@@ -28,6 +28,21 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        // let sorted = fruits.sort();
+
+        // for (var i = 0; i < sorted.length; i++) {
+        //     if (sorted[i] == sorted[i + 1]) {
+        //         sorted.splice(i, 1);
+        //         i--;
+        //     }
+        // }
+
+        // spread operator
+        let sorted = [...new Set(fruits)];
+
+        console.log(sorted);
+    });
 
 })();
