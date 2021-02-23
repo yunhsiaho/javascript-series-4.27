@@ -14,25 +14,5 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
-    let d = new Date();
-    let date= d.toDateString();
 
-    let hour = d.getHours() +':'+(d.getMinutes());
-
-    document.getElementById("target").innerHTML = "Hello, today it is " + date +" , "+ hour;
-    
-
-    /*
-
-   let today = new Date();         
-   let day = today.toLocaleString('en-EN', {weekday: "long"}); 
-   let date= today.getDate();  
-   let month =today.toLocaleDateString('en-En', {month: "long"});         
-   let year =today.getFullYear();         
-   
-   let hour = today.getHours();         
-   let min =today.getMinutes();                        
-   
-   document.getElementById("target").innerHTML = "Hello, today it is " + day + " " + date + " " + month + " " + year + ","  + " " + hour +"h"+ min;
-   */
 })();

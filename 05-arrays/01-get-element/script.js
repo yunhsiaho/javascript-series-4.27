@@ -26,10 +26,6 @@
         "cherry",
     ];
 
-    document.getElementById("run").addEventListener( "click", function(){
-        console.log(fruits[3])
-    })
-
     // your code here
 
 })();
