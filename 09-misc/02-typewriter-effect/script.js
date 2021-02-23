@@ -12,5 +12,16 @@
 (function() {
 
     // your code here
+    let textTarget = document.querySelector("#target").textContent;
+    document.querySelector("#target").textContent = "";
+    let i= 0;
+
+    function writter (){
+        if (i <= textTarget.length) 
+            document.querySelector("#target").textContent += textTarget.charAt(i);
+            i++;
+            setTimeout(writter, 50);
+    }
+    writter();
 
 })();

@@ -39,4 +39,21 @@
     ]);
 
     // your code here
+    document.querySelector("#run").addEventListener("click", function(){
+        
+        function getRandom(number) {
+            return Math.floor(Math.random() * number);
+        }
+
+        const adjArray = Array.from(adjectives);
+        let x = getRandom(birds.length);
+        let y = getRandom(adjArray.length);
+        let bird = birds[x];
+        let adj = adjArray[y];
+
+        bird.fem ?
+            document.querySelector("#target").innerHTML =  `${bird.name} ${adj}e`:
+            document.querySelector("#target").innerHTML = `${bird.name} ${adj}`;
+        
+    });
 })();
