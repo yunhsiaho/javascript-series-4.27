@@ -11,6 +11,30 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+
+        // User input
+        let birthDay = document.getElementById("dob-day").value;
+        let birthMonth = document.getElementById("dob-month").value;
+        let birthYear = document.getElementById("dob-year").value;
+
+
+        // Current date
+        let d = new Date();
+        let currentDay = d.getDate();
+        let currentMonth = d.getMonth()+1;
+        let currentYear = d.getFullYear();
+
+        let age = currentYear-birthYear;
+
+        if (currentMonth >= birthMonth && currentDay >= birthDay) {
+            console.log(age);
+        }
+
+        else {
+            console.log(age-1);
+        }
+
+   });
 
 })();
