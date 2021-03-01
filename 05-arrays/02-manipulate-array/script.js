@@ -24,20 +24,12 @@
         "cerise",
     ];
 
-    // your code here
-    document.getElementById("run").addEventListener("click", function(){
+    document.getElementById("run").addEventListener("click", function () {
 
-        //let first= fruits.unshift();
-        //let end= fruits.push("kiwi");
+        fruits[0] = "banane";
+        fruits[fruits.length - 1] = "kiwi";
+        console.log(fruits);
 
-        //fruits[0]="banana";
-        //fruits[fruits.length-1]="kiwi";
-
-        fruits.splice(0,1,"banana");
-        fruits.splice(-1,1,"kiwi");
-        console.log(fruits)
-
-    })
-    
+    });
 
 })();

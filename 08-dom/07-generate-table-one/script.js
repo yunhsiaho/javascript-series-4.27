@@ -12,5 +12,14 @@
 (function() {
 
     // your code here
+    var table = document.getElementById("target");
+
+    table.innerHTML = "<table></table>"
+
+    for (i=0;i<11;i++) {
+        document.querySelector("table").innerHTML += "<tr><td>test</td></tr>";
+        
+    }
+
 
 })();

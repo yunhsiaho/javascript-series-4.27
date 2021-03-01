@@ -10,11 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    class Cat {
-        constructor(name, age) {
-            this.name = name;
-            this.age = age;
+    
+
+    document.getElementById("run").addEventListener('click', function(){
+        class Cat {
+            constructor(_name, _age) {
+                this.name = _name;
+                this.age = _age;
+            }
         }
-    }
-    // your code here
+        let myCat1 = new Cat("Skitty","9 years old");
+        let myCat2 = new Cat("Pixel","6 years old");
+        console.log(myCat1);
+        console.log(myCat2);
+    });
+    
+
 })();

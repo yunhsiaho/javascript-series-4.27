@@ -11,10 +11,12 @@
 
 (function() {
 
+
     // your code here
     const target = document.querySelector('#target')
     const input = Array.from(document.querySelectorAll("input"))
     const numbers = new Array()
+
     
     input.forEach(item => {
         numbers.push(parseInt(item.getAttribute('data-min')))
@@ -57,6 +59,48 @@
                 btn.innerHTML = "Start"
             }   
         }),
+
     )
+
+    );
+    
+    
+    
+    // COMPLETE SOLUTION 
+    // const target = document.getElementById("target");
+    // const buttons = Array.from(document.querySelectorAll("button"));
+    // const inputs = Array.from(document.querySelectorAll("input"));
+
+    // const DELAY = 125;
+
+    // buttons.forEach((button, i) => {
+    //     const interval = () => {
+    //         const input = inputs[i];
+
+    //         let value = parseFloat(input.value);
+
+    //         if (++value > parseFloat(input.getAttribute("data-max"))) {
+    //             value = input.getAttribute("data-min");
+    //         }
+
+    //         input.value = `${value}`.padStart(2, "0");
+
+    //         target.innerText = `+${inputs.map(inp => inp.value).join("")}`;
+    //     };
+
+    //     let intervalID = setInterval(interval, DELAY);
+
+    //     button.addEventListener("click", () => {
+    //         if (intervalID) {
+    //             clearInterval(intervalID);
+    //             intervalID = null;
+    //             button.innerText = "Start";
+    //         } else {
+    //             intervalID = setInterval(interval, DELAY);
+    //             button.innerText = "Stop";
+    //         }
+    //     });
+    // });
+
 
 })();

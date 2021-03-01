@@ -30,11 +30,11 @@
         if (currentMonth >= birthMonth && currentDay >= birthDay) {
             console.log(age);
         }
-        
+
         else {
             console.log(age-1);
         }
-       
+
    });
 
 })();

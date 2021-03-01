@@ -30,6 +30,7 @@
     document.getElementById('run').addEventListener('click', function (){
 
         fruits.forEach(element => console.log(element));
-        
+
     });
+
 })();

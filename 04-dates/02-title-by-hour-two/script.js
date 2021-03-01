@@ -11,20 +11,19 @@
 
 (function() {
 
-    let d = new Date();
-    //console.log(d);
+    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    let x = d.getHours()*60;
-    //console.log(x);
-    let y = d.getMinutes();
-    //console.log(x + y);
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const time = hours*100 + minutes;
 
-    if ((x+y) < 1050) {
-        document.getElementById("target").innerHTML = "Hello";
-    }
+    console.log(hours)
 
-    else if ((x+y) >= 1050) {
-        document.getElementById("target").innerHTML = "Good evening";
+    if (time <= 1730) {
+      document.getElementById("target").innerHTML ="Bonjour";
+    } else {
+      document.getElementById("target").innerHTML ="Bonsoir";
     }
 
 })();

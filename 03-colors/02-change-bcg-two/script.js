@@ -15,4 +15,5 @@
         var col = document.getElementById("color").value;
         document.body.style.backgroundColor = col;
     });
+
 })();
