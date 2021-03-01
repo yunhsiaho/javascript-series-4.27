@@ -11,46 +11,57 @@
 
 (function() {
 
-    //CODE A AMELIORER
-    let numbers =  [460, 0, 0, 0];
-    let inputId = ['part-one', 'part-two', 'part-three', 'part-four']
 
-    function getRandom(){
-        return Math.floor(Math.random() * 99) + 1;
+    // your code here
+    const target = document.querySelector('#target')
+    const input = Array.from(document.querySelectorAll("input"))
+    const numbers = new Array()
+
+    
+    input.forEach(item => {
+        numbers.push(parseInt(item.getAttribute('data-min')))
+    })
+    
+    function getRandom(min, max){
+        return Math.floor(Math.random() *((max+1) - min) + min)
     }
     
-    function getRandom460(){
-        return Math.floor(Math.random() *(500 - 460) + 460);
-    }
-
-    function getInput(i){
-        if (numbers[i] == numbers[0])
-            numbers[i] =  getRandom460();
-        else
-            numbers[i] =  getRandom();
-            
-        document.getElementById((inputId[i])).value = numbers[i].toLocaleString('en-US', {
+    function setInput(i){
+        const minData = parseInt(input[i].getAttribute('data-min'))
+        const maxData = parseInt(input[i].getAttribute('data-max'))
+        numbers[i] =  getRandom(minData, maxData, i)
+        input[i].value = numbers[i].toLocaleString('en-US', {
             minimumIntegerDigits : 2,
-        });
-        print();
+        })
+        print()
     }
-
+    
     function print(){
-        const target = document.querySelector('#target');
         let result = '+'
         for (i=0; i<4; i++) {
             result += numbers[i].toLocaleString('en-US', {
                 minimumIntegerDigits : 2
-            });
-        };
-        target.innerHTML = result;
+            })
+        }
+        target.innerHTML = result
     }
-   
-    Array.from(document.querySelectorAll("button")).forEach((btn, i) =>
+    
+    const start = new Array()
+    Array.from(document.querySelectorAll("button")).forEach((btn, index) =>
     btn.addEventListener(
         "click",() => {
-            getInput(i);
+            btn.classList.toggle('on')
+            if(btn.className == 'on'){
+                start[index] = setInterval(setInput, 50, index)
+                btn.innerHTML = "Stop"
+            }else{
+                clearInterval(start[index])
+                btn.innerHTML = "Start"
+            }   
         }),
+
+    )
+
     );
     
     
@@ -74,7 +85,6 @@
 
     //         input.value = `${value}`.padStart(2, "0");
 
-    //         // kinda ugly, but, hey, I'm the coach!
     //         target.innerText = `+${inputs.map(inp => inp.value).join("")}`;
     //     };
 
@@ -91,5 +101,6 @@
     //         }
     //     });
     // });
+
 
 })();
