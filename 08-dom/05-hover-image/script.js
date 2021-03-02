@@ -11,6 +11,22 @@
 
 (function() {
 
+    var way = document.querySelector(".material figure img");
+    var newImage = way.getAttribute("data-hover");
+    var oldImage = way.getAttribute("src");
+    
+    way.removeAttribute("src")
+
+    way.onmouseover = function() {way.src = newImage;};
+    way.onmouseout = function() {way.src = oldImage;};
+
+
+
+
+    //way.innerHTML = `onmouseover="${newImage}"`;
+
+
+
     // your code here
 
 })();
